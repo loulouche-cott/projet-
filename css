@@ -1,2 +1,199 @@
 !doctype css!
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+/* En-tête                       */
+
+header {
+  text-align: center;
+  position: relative;
+}
+
+header img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  color: #1a1a1a;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Section d'introduction   */
+
+#about {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+#about h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+#about p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+#about a {
+  text-decoration: none;
+  background-color: #002b5c;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+#about a:hover {
+  background-color: #004a9e;
+}
+
+/* Galerie d'œuvres              */
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.artwork {
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fafafa;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.artwork:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.artwork img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.artwork h3 {
+  font-size: 1.2rem;
+  margin: 1rem 0 0.5rem;
+  color: #222;
+}
+
+.artwork p {
+  padding: 0 1rem 1.5rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Pied de page                  */
+
+footer {
+  background-color: #001b3a;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+footer section {
+  margin-bottom: 1.5rem;
+}
+
+footer h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+footer p, footer ul {
+  font-size: 0.95rem;
+  margin: 0.3rem 0;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer ul li a:hover {
+  color: #cdd9f0;
+}
+
+/* ----------------------------- */
+/* Responsive Design             */
+/* ----------------------------- */
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  #about h2 {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  #about a {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  footer h4 {
+    font-size: 1rem;
+  }
+
+  footer ul li {
+    display: block;
+    margin: 0.4rem 0;
+  }
+}
 
