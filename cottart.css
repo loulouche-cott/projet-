@@ -7,7 +7,7 @@
 
 body {
   font-family: "montessera", Arial, sans-serif;
-  color: #fff;
+  color: #0000;
   background-color: #fff;
   line-height: 1.6;
 }
@@ -32,7 +32,6 @@ nav ul{
     display: flex;
     flex-direction: row;
     gap: 30%;
-  color: #FFFFFF
 }
 
 nav ul li{
