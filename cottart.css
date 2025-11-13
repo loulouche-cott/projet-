@@ -1,4 +1,4 @@
-!doctype css!
+/*doctype css*/
 * {
   margin: 0;
   padding: 0;
@@ -14,29 +14,35 @@ body {
 
 /* Haut de page */
 
-header {
-  text-align: center;
-  position: relative;
+header{
+    background-image: url(Images/angedechu.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-header img {
-  width: 100%;
-  height: auto;
-  display: block;
+.container1{
+    display: flex;
 }
 
-header h1 {
-  font-size: 2.5rem;
-  margin-top: 1rem;
-  color: #1a1a1a;
+.logo{
+    width: 100px;
 }
 
-header p {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 2rem;
+nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 30%;
 }
 
+nav ul li{
+    list-style:none;
+}
+
+.container2{
+    text-align: center;
+    color: white;
+    padding-top: 250px;
+}
 /*  Introduction   */
 
 #about {
@@ -73,12 +79,15 @@ header p {
 /* Galerie des œuvres */
 
 main {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .artwork {
@@ -158,9 +167,8 @@ footer ul li a:hover {
   color: #cdd9f0;
 }
 
-/* ----------------------------- */
-/* Design version responsive            */
-/* ----------------------------- */
+
+/* Design version responsive   */
 
 @media (max-width: 768px) {
   header h1 {
@@ -196,4 +204,3 @@ footer ul li a:hover {
     margin: 0.4rem 0;
   }
 }
-
