@@ -35,11 +35,12 @@ nav ul {
   display: flex;
   flex-direction: row;
   gap: 30px;
+  color: #fff,
 }
 
 nav ul li {
   list-style: none;
-  color: #fffff;
+  color: #fff;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
@@ -53,13 +54,13 @@ html {
 /* Style des liens du menu */
 nav ul li a {
   text-decoration: none; /* Enlève le soulignement */
-  color: #ff; /* Prend la couleur du texte parent */
+  color: #fff; /* Prend la couleur du texte parent */
   cursor: pointer;
 }
 
 /* Supprime la couleur violette des liens visités */
 nav ul li a:visited {
-  color: inherit;
+  color: #fff;
 }
 
 /* Effet au survol */
@@ -69,7 +70,7 @@ nav ul li a:hover {
 
 /* Couleur du lien actif */
 nav ul li a:active {
-  color: #ffffff;
+  color: #fff;
 }
 
 
