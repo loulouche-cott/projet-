@@ -53,9 +53,7 @@ h1 {
   padding-top: 500px;
 }
 
-/* =====================
-   INTRODUCTION
-===================== */
+/*  INTRODUCTION */
 
 #about {
   text-align: center;
@@ -88,7 +86,7 @@ h1 {
   background-color: #004a9e;
 }
 
-/* BOUTON FEATURED */
+/* BOUTON  */
 
 .featured button {
   margin-top: 15px;
