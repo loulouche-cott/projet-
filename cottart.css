@@ -1,4 +1,9 @@
 /*doctype css*/
+
+html {
+  scroll-behaviour: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -40,6 +45,12 @@ nav ul {
 nav ul li {
   list-style: none;
   color: #fff;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 h1 {
