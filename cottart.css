@@ -99,7 +99,18 @@ h1 {
 
 /* Galerie des œuvres */
 
+.artwork {
+    text-align: center;
+}
 
+/* Images */
+.artwork img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
 
 main {
   gap: 2rem;
