@@ -6,50 +6,58 @@
 }
 
 body {
-  font-family: "montessera", Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   background-color: #fff;
   line-height: 1.6;
 }
 
-/* Haut de page */
+/* =====================
+   HAUT DE PAGE
+===================== */
 
-header{
-    background-image: url(Images/angedechu.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center 60%;
+header {
+  background-image: url(Images/angedechu.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 60%;
 }
 
-.container1{
-    display: flex;
+.container1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
 }
 
-.logo{
-    width: 100px;
+.logo {
+  width: 100px;
 }
 
-nav ul{
-    display: flex;
-    flex-direction: row;
-    gap: 30%;
+nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
 }
 
-nav ul li{
-    list-style:none;
-    color: #fff
+nav ul li {
+  list-style: none;
+  color: #fff;
 }
 
 h1 {
-    margin-top: -30px; 
-    font-size: 60px;
+  margin-top: -30px;
+  font-size: 60px;
 }
 
-.container2{
-    text-align: center;
-    color: white;
-    padding-top: 500px;
+.container2 {
+  text-align: center;
+  color: white;
+  padding-top: 500px;
 }
-/*  Introduction   */
+
+/* =====================
+   INTRODUCTION
+===================== */
 
 #about {
   text-align: center;
@@ -82,35 +90,28 @@ h1 {
   background-color: #004a9e;
 }
 
-/* Bouton */
+/* =====================
+   BOUTON FEATURED
+===================== */
+
 .featured button {
-    margin-top: 15px;
-    background-color: #2336a3;
-    color: white;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
+  margin-top: 15px;
+  background-color: #2336a3;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .featured button:hover {
-    background-color: #384bcc;
-
-/* Galerie des œuvres */
-
-.artwork {
-    text-align: center;
+  background-color: #384bcc;
 }
 
-/* Images */
-.artwork img {
-    width: 100%;
-    max-width: 280px;
-    height: auto;
-    border-radius: 6px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
+/* =====================
+   GALERIE DES ŒUVRES
+===================== */
 
 main {
   gap: 2rem;
@@ -119,11 +120,13 @@ main {
   margin: 0 auto;
 }
 
-.grid{
+.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
+/* Carte d’œuvre */
 .artwork {
   text-align: center;
   border: 1px solid #ddd;
@@ -156,14 +159,15 @@ main {
   font-size: 0.95rem;
 }
 
-/* Footer / Bas/Pied de page */
+/* =====================
+   FOOTER
+===================== */
 
 footer {
   background-color: #030642;
   color: white;
   padding: 2rem 1rem;
   text-align: center;
-  
 }
 
 footer section {
@@ -177,9 +181,9 @@ footer h4 {
   letter-spacing: 1px;
 }
 
-footer p, footer ul {
+footer p,
+footer ul {
   font-size: 0.95rem;
-  margin: 0.3rem 0;
 }
 
 footer ul {
@@ -199,11 +203,12 @@ footer ul li a {
 }
 
 footer ul li a:hover {
-  color: #030642;
+  color: #4a66ff;
 }
 
-
-/* Design version responsive   */
+/* =====================
+   RESPONSIVE
+===================== */
 
 @media (max-width: 768px) {
   header h1 {
@@ -216,7 +221,6 @@ footer ul li a:hover {
 
   main {
     padding: 1rem;
-    gap: 1.5rem;
   }
 }
 
