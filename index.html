@@ -1,135 +1,177 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="utf-8">
-    <title>COTT'ART</title>
-    <link rel="stylesheet" href="cottart.css">
-    <link rel="shortcut icon" href="Images/logominimaliste.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="cottart.css">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galerie Cott'Art - Découvrez des œuvres d'art contemporain : peintures, aquarelles et encres de Chine. Galerie d'art à Nice spécialisée dans l'art contemporain.">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="galerie d'art, art contemporain, Cott'Art, exposition, artiste, peinture, aquarelle, oeuvre d'art, encre de chine">
+    <meta name="author" content="Galerie Cott'Art">
+    <meta name="theme-color" content="#001a4d">
+    <meta property="og:title" content="Galerie Cott'Art - Œuvres d'Art Contemporain">
+    <meta property="og:description" content="Galerie Cott'Art - Découvrez des œuvres d'art contemporain : peintures, aquarelles et encres de Chine.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="Images/angedechu.jpg">
+    <title>Galerie Cott'Art - Œuvres d'Art Contemporain | Peinture & Aquarelle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="GalerieCOTTART.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="favicon-apple.png">
+
+    <!-- SCHEMA MARKUP - JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ArtGallery",
+      "name": "Galerie Cott'Art",
+      "description": "Galerie d'art contemporain proposant des œuvres uniques et contemporaines",
+      "image": "Images/angedechu.jpg",
+      "url": "https://www.cott-art.com",
+      "sameAs": [
+        "https://www.facebook.com/cottart",
+        "https://www.instagram.com/cottart"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Adresse de votre galerie",
+        "addressLocality": "Votre Ville",
+        "postalCode": "Code Postal",
+        "addressCountry": "FR"
+      },
+      "telephone": "+33 X XX XX XX XX",
+      "email": "contact@cott-art.com"
+    }
+    </script>
 </head>
-
 <body>
-
-<header>
-    <div class="container1">
-        <img src="Images/logominimaliste.png" alt="Logo Cott'Art" class="logo">
-
-        <nav>
-            <ul>
-                <li><a href="#MENU">MENU</a></li>
-                <li><a href="#ŒUVRES">ŒUVRES</a></li>
-                <li><a href="#CONTENUS">CONTENUS</a></li>
-                <li><a href="#CONTACTS">CONTACTS</a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <div class="container2" id="MENU">
-        <h1>Cott'Art Gallery</h1>
-        <p>Entrez, Regardez, Ressentez... L'Art commence ici.</p>
-    </div>
+    <header>
+    <nav class="navbar" role="navigation" aria-label="Navigation principale">
+        <div class="logo">
+            <img src="Images/logominimaliste.png" alt="Cott'Art Galerie Logo">
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#menu" aria-current="page">MENU</a></li>
+            <li><a href="#oeuvres">ŒUVRES</a></li>
+            <li><a href="#contenus">CONTENUS</a></li>
+            <li><a href="#contacts">CONTACTS</a></li>
+        </ul>
+    </nav>
 </header>
 
 
-<!-- INTRODUCTION -->
-<section id="about">
-    <h2>Bienvenue à la Galerie Cott'Art</h2>
-
-    <p>
-        Située au cœur de la création contemporaine, la Galerie Cott'Art est un espace dédié à l'expression
-        artistique sous toutes ses formes. Nous mettons en lumière des artistes émergents et confirmés,
-        dont le travail questionne, émeut et inspire.
-    </p>
-</section>
-
-
-<!-- ŒUVRE PHARE + GALERIE -->
-<main>
-
- <!-- BOUTON ŒUVRE PHARE  -->
-    <div class="featured">
-        <button type="button">Œuvre phare</button>
-    </div>
-
-    <div class="grid" id="ŒUVRES">
-
-        <section class="artwork">
-            <img src="Images/lesjardinsengloutisdebabylone.jpg" alt="Les jardins engloutis de Babylone">
-            <h3>Les jardins engloutis de Babylone</h3>
-            <p>Les jardins suspendus de Babylone, version dystopique dénonçant la pollution et le dérèglement climatique. Œuvre réalisée à l'aquarelle.</p>
-        </section>
-
-        <section class="artwork">
-            <img src="Images/laflechedelamour.jpg" alt="La flèche de l'amour">
-            <h3>La flèche de l'amour</h3>
-            <p>Œuvre à l'encre de Chine illustrant deux âmes sœurs liées pour l'éternité, unies au-delà de la mort.</p>
-        </section>
-
-        <section class="artwork" id="CONTENUS">
-            <img src="Images/lebebepharaon.jpg" alt="Le bébé pharaon">
-            <h3>Le bébé pharaon</h3>
-            <p>Représentation dystopique de la pyramide de Khéops. Dénonce l'esclavagisme. Réalisée à l'encre colorée et au crayon.</p>
-        </section>
-
-        <section class="artwork">
-            <img src="Images/ledesespere.jpg" alt="Le désespéré">
-            <h3>Le désespéré</h3>
-            <p>Œuvre satirique inspirée du Désespéré de Courbet, dénonçant les catastrophes naturelles liées au changement climatique.</p>
-        </section>
-
-        <section class="artwork">
-            <img src="Images/lesilenceduciel.jpg" alt="Le Silence du Ciel">
-            <h3>Le Silence du Ciel</h3>
-            <p>Œuvre à l'encre de Chine explorant la chute et la légèreté d'un corps ailé.</p>
-        </section>
-
-    </div>
-
-    <p style="text-align:center; margin-top:2rem;">
-        La Galerie Cott'Art célèbre la création contemporaine sous toutes ses formes. Un lieu vivant où artistes et visiteurs se rencontrent, échangent et s'inspirent.
-    </p>
-</main>
-
-
-<!-- FOOTER -->
-<footer id="CONTACTS">
-
-    <section>
-        <h4>Contacts</h4>
-        <p>+33 4 93 20 83 10</p>
-        <p>cottartgalerie@gmail.com</p>
-        <p>98 Bd Edouard Herriot</p>
-        <p>06200 Nice</p>
+    <!-- Section Accueil -->
+    <section class="hero" id="menu" role="banner" aria-label="Section accueil">
+        <div class="hero-content">
+            <h1>Cott'Art Gallery</h1>
+            <p class="hero-subtitle">Entrez, Regardez, Ressentez ... l'Art commence ici.</p>
+        </div>
     </section>
 
-    <section>
-        <h4>Soyez inspiré par l'actualité Cott'Art Gallery :</h4>
-        <input type="email" placeholder="*E-mail" required>
-        <button type="submit">Envoyer</button>
+    <!-- Welcome Section -->
+    <section class="welcome">
+        <h2>Bienvenue à la Galerie Cott'Art</h2>
+        <p>Située au cœur de la création contemporaine, la Galerie Cott'Art est un espace dédié à l'expression artistique sous toutes ses formes. Nous mettons en lumière des artistes émergents et confirmés, dont le travail questionne émotion et inspire.</p>
     </section>
 
-    <section>
-        <h4>Suivez-nous</h4>
-        <ul>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">LinkedIn</a></li>
-        </ul>
+    <!-- Featured Artwork -->
+    <section class="featured" id="oeuvres">
+        <div class="featured-container">
+            <div class="featured-image">
+                <img src="Images/lesjardinsengloutisdebabylone.jpg" alt="Les jardins engloutis de Babylone">
+            </div>
+            <div class="featured-info">
+                <span class="label">Œuvre phare</span>
+                <h3>Les jardins engloutis de Babylone</h3>
+                <p>Les jardins suspendus de Babylone, versions dystopiques, dénoncent la pollution et le dérèglement climatique. Œuvre réalisée à l'aquarelle.</p>
+            </div>
+        </div>
     </section>
 
-    <section>
-        <ul>
-            <li>Mentions légales</li>
-            <li>Gestion des préférences</li>
-            <li>Plan du site</li>
-        </ul>
+    <!-- Gallery Grid -->
+    <section class="gallery">
+        <div class="gallery-grid">
+            <!-- Artwork 1 -->
+            <article class="artwork-card">
+                <div class="artwork-image">
+                    <img src="Images/laflechedelamour.jpg" alt="La flèche de l'amour">
+                </div>
+                <h3>La flèche de l'amour</h3>
+                <p>Œuvre à l'encre de Chine illustrant deux âmes sœurs liées pour l'éternité, unies au-delà de la mort.</p>
+            </article>
+
+            <!-- Artwork 2 -->
+            <article class="artwork-card">
+                <div class="artwork-image" id="contenus">
+                    <img src="Images/lebebepharaon.jpg" alt="Le bébé pharaon">
+                </div>
+                <h3>Le bébé pharaon</h3>
+                <p>Représentation dystopique de la pyramide de Khéops, cette œuvre dénonce l'esclavagisme. Réalisée à l'encre colorée et au crayon.</p>
+            </article>
+
+            <!-- Artwork 3 -->
+            <article class="artwork-card">
+                <div class="artwork-image">
+                    <img src="Images/ledesespere.jpg" alt="Le désespéré">
+                </div>
+                <h3>Le désespéré</h3>
+                <p>Œuvre satirique inspirée du Désespéré de Courbet, illustrant les catastrophes naturelles causées par le dérèglement climatique. Réalisée à l'aquarelle et à l'encre.</p>
+            </article>
+
+            <!-- Artwork 4 -->
+            <article class="artwork-card">
+                <div class="artwork-image">
+                    <img src="Images/lesilenceduciel.jpg" alt="Le Silence du Ciel">
+                </div>
+                <h3>Le Silence du Ciel</h3>
+                <p>Œuvre à l'encre de Chine, explorant la chute et la légèreté à travers le mouvement d'un corps ailé.</p>
+            </article>
+        </div>
     </section>
 
-    <section>
-        <p>&copy; 2025 Cott'Art Gallery — Tous droits réservés.</p>
+    <!-- Mission Statement -->
+    <section class="mission">
+        <p>La galerie Cott'Art célèbre la création contemporaine sous toutes ses formes. Un lieu vivant où artistes et visiteurs se rencontrent, échangeant et s'inspirent.</p>
     </section>
-</footer>
 
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="newsletter-container" id="contacts">
+            <div class="newsletter-content">
+                <p>Soyez inspiré par l'actualité Cott'Art Gallery :</p>
+                <form class="newsletter-form">
+                   <input type="text" name="Nom" placeholder="Nom" pattern="[A-Za-zÀ-ÿ\s\-']+" title="Veuillez entrer un nom valide (lettres uniquement)" minlength="2" required>
+                    <input type="text" name="prenom" placeholder="Prénom" pattern="[A-Za-zÀ-ÿ\s\-']+" title="Veuillez entrer un prénom valide (lettres uniquement)" minlength="2" required>
+                    <input type="email" name="email" placeholder="E-mail" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Veuillez entrer une adresse email valide (exemple: nom@domaine.com)" required>
+                    <button type="submit">Valider</button>
+                </form>
+                <div class="social-links">
+                    <h4>Suivez nous</h4>
+                    <ul>
+                        <li><a href="#" target="_blank">Instagram</a></li>
+                        <li><a href="#" target="_blank">LinkedIn</a></li>
+                        <li><a href="#" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contact-info">
+                <h4>Contacts</h4>
+                <p><a href="tel:+33493208310">+33 4 93 20 83 10</a></p>
+                <p><a href="mailto:cottartgallerie@gmail.com">cottartgallerie@gmail.com</a></p>
+                <p>26 bis Boulevard Herriot<br>06300 Nice</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#mentions">Mentions légales</a>
+            <a href="#preferences">Gestion des préférences</a>
+            <a href="#plan">Plan du site</a>
+        </div>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">© 2025 Cott'Art Gallery — Tous droits réservés.</p>
+    </footer>
 </body>
 </html>
