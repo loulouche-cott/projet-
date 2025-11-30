@@ -1,266 +1,581 @@
-/*doctype css*/
+/* Reset & Base Styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Montserrat", Arial, sans-serif;
-  background-color: #fff;
-  line-height: 1.6;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
 }
 
-/* HAUT DE PAGE */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* Header & Navigation */
 header {
-  background-image: url(Images/angedechu.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center 60%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: transparent; /* Transparent au lieu de blanc */
+    backdrop-filter: none; /* Suppression du flou */
+    z-index: 1000;
+    box-shadow: none; /* Suppression de l'ombre */
 }
 
-.container1 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.5rem;
+.navbar {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.logo {
-  width: 100px;
+.logo img {
+    height: 120px; /* Ajustez selon la taille de votre logo */
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5)); /* Ombre pour visibilité */
 }
 
-nav ul {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  color: #fff,
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
 }
 
-nav ul li {
-  list-style: none;
-  color: #fff;
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
+.nav-menu a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff; /* Texte en blanc */
+    position: relative;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Ombre pour meilleure lisibilité */
 }
 
-/* Défilement fluide */
-html {
-  scroll-behavior: smooth;
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ffffff; /* Soulignement blanc */
+    transition: width 0.3s ease;
 }
 
-/* Style des liens du menu */
-nav ul li a {
-  text-decoration: none; /* Enlève le soulignement */
-  color: #fff; /* Prend la couleur du texte parent */
-  cursor: pointer;
+.nav-menu a:hover::after {
+    width: 100%;
 }
 
-/* Supprime la couleur violette des liens visités */
-nav ul li a:visited {
-  color: #fff;
+/* Hero Section */
+.hero {
+    margin-top: 0px;
+    height: 100vh;
+    background: url('Images/angedechu.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
 }
 
-/* Effet au survol */
-nav ul li a:hover {
-  opacity: 0.7; /* Ou une autre couleur de ton choix */
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
 }
 
-/* Couleur du lien actif */
-nav ul li a:active {
-  color: #fff;
+.hero-subtitle {
+    font-size: 1.3rem;
+    font-weight: 300;
+    letter-spacing: 1px;
 }
 
-
-h1 {
-  margin-top: -20px;
-  font-size: 60px;
-  font-weight: 600;
+/* Welcome Section */
+.welcome {
+    max-width: 900px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+    text-align: center;
 }
 
-.container2 {
-  text-align: center;
-  color: white;
-  padding-top: 500px;
-}
-
-/*  INTRODUCTION */
-
-#about {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
-
-#about h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-#about p {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-  color: #555;
-}
-
-#about a {
-  text-decoration: none;
-  background-color: #002b5c;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  transition: background 0.3s;
-}
-
-#about a:hover {
-  background-color: #004a9e;
-}
-
-/* BOUTON  */
-
-.featured button {
-  margin-top: 15px;
-  background-color: #030642;
-  color: white;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 5px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.featured button:hover {
-  background-color: #384bcc;
-}
-
-/* GALERIE DES ŒUVRES */
-
-main {
-  gap: 2rem;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-/* Carte d’œuvre */
-.artwork {
-  text-align: center;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  background: #fafafa;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.artwork:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.artwork img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.artwork h3 {
-  font-size: 1.2rem;
-  margin: 1rem 0 0.5rem;
-  color: #222;
-}
-
-.artwork p {
-  padding: 0 1rem 1.5rem;
-  color: #555;
-  font-size: 0.95rem;
-}
-
-/* FOOTER */
-
-footer {
-  background-color: #030642;
-  color: white;
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-footer section {
-  margin-bottom: 1.5rem;
-}
-
-footer h4 {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-footer p,
-footer ul {
-  font-size: 0.95rem;
-}
-
-footer ul {
-  list-style: none;
-  padding: 0;
-}
-
-footer ul li {
-  display: inline-block;
-  margin: 0 0.5rem;
-}
-
-footer ul li a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-footer ul li a:hover {
-  color: #4a66ff;
-}
-
-/*  RESPONSIVE */
-
-@media (max-width: 768px) {
-  header h1 {
+.welcome h2 {
     font-size: 2rem;
-  }
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+}
 
-  #about h2 {
+.welcome p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Featured Section */
+.featured {
+    background-color: #ffffff;
+    padding: 4rem 2rem;
+}
+
+.featured-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.featured-image {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); /* Même ombre que les autres */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajout de la transition */
+}
+
+.featured-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.5s ease; /* Animation au survol */
+}
+
+/* Effet hover sur l'image phare */
+.featured-container:hover .featured-image {
+    transform: translateY(-10px); /* Élévation au survol */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); /* Ombre plus prononcée */
+}
+
+.featured-container:hover .featured-image img {
+    transform: scale(1.05); /* Zoom léger sur l'image */
+}
+
+.featured-info .label {
+    display: block; /* Change de inline-block à block */
+    background: #001a4d;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0 auto 1.5rem; /* Centre horizontalement */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: fit-content; /* S'adapte à la largeur du texte */
+}
+    
+.featured-info h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+    text-align: center;
+}
+
+.featured-info p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    text-align: center;
+}
+
+/* Gallery Grid */
+.gallery {
+    max-width: 1400px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+
+.artwork-card {
+    background: #fff;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.artwork-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.artwork-image {
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); /* Ajout d'ombre */
+}
+
+.artwork-image img {
+    width: 100%;
+    height: 700px; /* Hauteur fixe pour uniformité */
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.artwork-card:hover .artwork-image img {
+    transform: scale(1.05);
+}
+
+.artwork-card h3 {
     font-size: 1.5rem;
-  }
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
 
-  main {
-    padding: 1rem;
-  }
+.artwork-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #666;
+}
+
+/* Mission Statement */
+.mission {
+    background-color: #ffffff;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.mission p {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Newsletter Section */
+.newsletter {
+    background: #001a4d;
+    color: #fff;
+    padding: 2rem 2rem;
+}
+
+.newsletter-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+}
+
+.newsletter-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+    max-width: 400px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.newsletter-form button {
+    padding: 0.8rem 2rem;
+    background: #fff;
+    color: #001a4d;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background: #f0f0f0;
+}
+
+.social-links h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.social-links ul {
+    list-style: none;
+}
+
+.social-links ul li {
+    margin-bottom: 0.5rem;
+}
+
+.social-links a {
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.contact-info {
+    margin-top: 1rem;
+    margin-left: -8.5rem;
+    padding-left: 13rem; /* Espace entre la ligne et le contenu */
+    border-left: 5px solid #fff; /* Ligne blanche semi-transparente */
+}
+
+.contact-info h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    margin-top: 7rem;
+}
+
+.contact-info p {
+    margin-bottom: 0.8rem;
+    line-height: 1.8;
+}
+
+.contact-info a {
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    background: #000d26;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    font-size: 0.95rem;
+    color: #fff;
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .featured-container {
+        gap: 2rem;
+    }
+
+    .gallery-grid {
+        gap: 2rem;
+    }
+
+    .newsletter-container {
+        gap: 3rem;
+    }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.8rem 1rem;
+        gap: 1rem;
+    }
+
+    .nav-menu {
+        gap: 1rem;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .nav-menu a {
+        font-size: 0.7rem; /* Réduit la taille du texte */
+        white-space: nowrap; /* Empêche les mots de se couper */
+    }
+
+    .hero {
+        height: 550px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .welcome {
+        margin: 3rem auto;
+    }
+
+    .welcome h2 {
+        font-size: 1.6rem;
+    }
+
+    .welcome p {
+        font-size: 1rem;
+    }
+
+    .featured-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .featured-info h3 {
+        font-size: 1.6rem;
+    }
+
+    .gallery {
+        margin: 3rem auto;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .artwork-image img {
+        height: 300px;
+    }
+
+    .newsletter-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+     .logo img {
+        height: 50px; /* Logo plus petit sur mobile */
+    }
+    .contact-info {
+        border-left: none; /* Supprime la ligne en mobile */
+        padding-left: 0; /* Supprime aussi l'espace à gauche */
+        margin-left: 0;
+        margin-top: 2rem; /* Réduit l'espace en haut si besoin */
+    }
 }
 
 @media (max-width: 480px) {
-  header h1 {
-    font-size: 1.6rem;
-  }
+    .navbar {
+        padding: 0.6rem 0.8rem;
+    }
 
-  #about a {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
-  }
+    .nav-menu {
+        gap: 1rem;
+    }
 
-  footer h4 {
-    font-size: 1rem;
-  }
+    .nav-menu a {
+        font-size: 0.6rem;
+    }
 
-  footer ul li {
-    display: block;
-    margin: 0.4rem 0;
-  }
+    .hero {
+        height: 450px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .welcome h2 {
+        font-size: 1.4rem;
+    }
+
+    .featured-info h3 {
+        font-size: 1.4rem;
+    }
+
+    .artwork-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .artwork-image img {
+        height: 250px;
+    }
+
+    .newsletter-container {
+        gap: 1rem;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+   
+    .contact-info {
+        border-left: none;
+        padding-left: 0;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .navbar {
+        padding: 0.5rem 0.6rem;
+    }
+    
+    .nav-menu a {
+        font-size: 0.55rem;
+    }
+    
+    .hero {
+        height: 400px;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.3rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.8rem;
+    }
+
+    .artwork-image img {
+        height: 200px;
+    }
+    
+    .logo img {
+        height: 35px;
+    }
 }
